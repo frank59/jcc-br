@@ -24,7 +24,9 @@ public class LoadFileTester {
 			content.add((char) c);
 		}
 		for(int i=0; i<content.size(); i=i+2) {
-			ts.put(content.get(i), content.get(i+1));
+			if(!content.get(i).equals(content.get(i+1))) {
+				ts.put(content.get(i), content.get(i+1));
+			}
 		}
 		
 		FileWriter writer = new FileWriter("D:/ts.dat");
