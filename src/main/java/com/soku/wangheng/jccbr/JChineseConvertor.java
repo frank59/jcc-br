@@ -43,7 +43,7 @@ public class JChineseConvertor {
 		st = new HashMap<Character, Character>();
 		
 		//load source file
-		BufferedReader reader = new BufferedReader(new InputStreamReader(NewJCCTester.class.getResourceAsStream(srcFile), "UTF-8"));
+		BufferedReader reader = new BufferedReader(new InputStreamReader(JChineseConvertor.class.getResourceAsStream(srcFile), "UTF-8"));
 		try {
 			String line = null;
 			int lineNum = 0;
