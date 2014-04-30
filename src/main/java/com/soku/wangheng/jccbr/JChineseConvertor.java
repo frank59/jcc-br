@@ -87,17 +87,17 @@ public class JChineseConvertor {
 	 * @return Simplified result
 	 */
 	public String t2s(String str) {
-		StringBuilder sb = new StringBuilder();
-		char[] chararr = str.toCharArray();
-		for (char tchar : chararr) {
+		char[] result = new char[str.length()];
+		for (int i = 0; i < str.length(); i++) {
+			char tchar = str.charAt(i);
 			Character schar = ts.get(tchar);
 			if (schar != null) {
-				sb.append(schar.toString());
+				result[i] = schar;
 			} else {
-				sb.append(tchar);
+				result[i] = tchar;
 			}
 		}
-		return sb.toString();
+		return new String(result);
 	}
 	
 	
@@ -107,17 +107,17 @@ public class JChineseConvertor {
 	 * @return Traditional result
 	 */
 	public String s2t(String str) {
-		StringBuilder sb = new StringBuilder();
-		char[] chararr = str.toCharArray();
-		for (char schar : chararr) {
+		char[] result = new char[str.length()];
+		for (int i = 0; i < str.length(); i++) {
+			char schar = str.charAt(i);
 			Character tchar = st.get(schar);
 			if (tchar != null) {
-				sb.append(tchar.toString());
+				result[i] = tchar;
 			} else {
-				sb.append(schar);
+				result[i] = schar;
 			}
 		}
-		return sb.toString();
+		return new String(result);
 	}
 
 }
