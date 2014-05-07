@@ -6,8 +6,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.soku.wangheng.jccbr.test.NewJCCTester;
-
 /**
  * This is a tool convert Traditional Chinese character to Simplified. 
  * The character source is other encoding (e.g. gbk or gb2313) 
